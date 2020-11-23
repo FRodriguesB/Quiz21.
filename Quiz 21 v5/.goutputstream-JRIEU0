@@ -1,0 +1,217 @@
+class UnitTest():
+    def __init__(self):
+        self.func_ok = 0
+        self.func_erro = 0
+    
+    def unitTestbtnGerenciar(self, value, func):
+        return_ok = "viewGerenciar"
+        
+        if value == return_ok:
+            print("Teste executado com sucesso!\n"
+                  "Função %s OK\n" % func)
+            self.func_ok += 1
+        
+        else:
+            print("Erro na execução da função: %s\n"
+                  "Detalhes: Resultado diferente do esperado\n" % func)
+            self.func_erro += 1
+    
+    def unitTestGerenciarPerguntas(self, value, func):
+        return_ok = "viewPergunta"
+        
+        if value == return_ok:
+            print("Teste executado com sucesso!\n"
+                  "Função %s OK\n" % func)
+            self.func_ok += 1
+        
+        else:
+            print("Erro na execução da função: %s\n"
+                  "Detalhes: Resultado diferente do esperado\n" % func)
+            self.func_erro += 1
+    
+    
+    def unitTestbtnGerenciarRespostas(self, value, func):
+        return_ok = "viewResposta"
+        
+        if value == return_ok:
+            print("Teste executado com sucesso!\n"
+                  "Função %s OK\n" % func)
+            self.func_ok += 1
+        
+        else:
+            print("Erro na execução da função: %s\n"
+                  "Detalhes: Resultado diferente do esperado\n" % func)
+            self.func_erro += 1
+    
+    def unitTestbtnGerenciarCategorias(self, value, func):
+        return_ok = "viewCategoria"
+        
+        if value == return_ok:
+            print("Teste executado com sucesso!\n"
+                  "Função %s OK\n" % func)
+            self.func_ok += 1
+        
+        else:
+            print("Erro na execução da função: %s\n"
+                  "Detalhes: Resultado diferente do esperado\n" % func)
+            self.func_erro += 1
+    
+    def unitTestbtnNovoPergunta(self, value, func):        
+        """
+            Aqui verifico se a cursor não retornou uma lista vazia
+            Se não retornou significa que a inclusão ocorreu com sucesso!
+        """
+        if len(value) > 0:
+            print("Teste executado com sucesso!\n"
+                  "Função %s OK\n" % func)
+            self.func_ok += 1
+            
+        else:
+            print("Erro na execução da função: %s\n"
+                  "Detalhes: Resultado diferente do esperado\n" % func)
+            self.func_erro += 1
+    
+    def unitTestbtnAlterarPergunta(self, value, func):        
+        """
+            Aqui verifico se o usuário selecionou uma pengunta
+            Caso sim o tamanho da lista deve ser maior que zero
+        """
+        if len(value) > 0:
+            print("Teste executado com sucesso!\n"
+                  "Função %s OK\n" % func)
+            self.func_ok += 1
+            
+        else:
+            print("Erro na execução da função: %s\n"
+                  "Detalhes: Resultado diferente do esperado\n" % func)
+            self.func_erro += 1
+    
+    def unitTestbtnBuscarPergunta(self, value, func):        
+        """
+            Aqui verifico se o tipo de retorno é uma lista
+        """
+        if type(value) == list:
+            print("Teste executado com sucesso!\n"
+                  "Função %s OK\n" % func)
+            self.func_ok += 1
+            
+        else:
+            print("Erro na execução da função: %s\n"
+                  "Detalhes: Resultado diferente do esperado\n" % func)
+            self.func_erro += 1
+    
+    def unitTestbtnExcluirPergunta(self, value, func):        
+        """
+            Aqui verifico se não existe mais nenhum código para ser excluído
+        """
+        if len(value) == 0:
+            print("Teste executado com sucesso!\n"
+                  "Função %s OK\n" % func)
+            self.func_ok += 1
+            
+        else:
+            print("Erro na execução da função: %s\n"
+                  "Detalhes: Resultado diferente do esperado\n" % func)
+            self.func_erro += 1
+    
+    def unitTest_ao_selecionar_pergunta(self, value, func):        
+        """
+            Aqui verifico se o parametro ainda é do tipo lista
+        """
+        if type(value) == list:
+            print("Teste executado com sucesso!\n"
+                  "Função %s OK\n" % func)
+            self.func_ok += 1
+            
+        else:
+            print("Erro na execução da função: %s\n"
+                  "Detalhes: Resultado diferente do esperado\n" % func)
+            self.func_erro += 1
+    
+    def unitTestbtnVoltarPergunta(self, value, func):        
+        """
+            Aqui verifico se a view atual é a esperada
+        """
+        return_ok = "viewInicio"
+        
+        if value == return_ok:
+            print("Teste executado com sucesso!\n"
+                  "Função %s OK\n" % func)
+            self.func_ok += 1
+            
+        else:
+            print("Erro na execução da função: %s\n"
+                  "Detalhes: Resultado diferente do esperado\n" % func)
+            self.func_erro += 1
+    
+    def unitTestbtnNovoCategoria(self, value, func):        
+        """
+            Aqui verifico se a categoria não é nula
+        """
+        
+        if value != "":
+            print("Teste executado com sucesso!\n"
+                  "Função %s OK\n" % func)
+            self.func_ok += 1
+            
+        else:
+            print("Erro na execução da função: %s\n"
+                  "Detalhes: Resultado diferente do esperado\n" % func)
+            self.func_erro += 1
+    
+    def unitTest_ao_selecionar_categoria(self, value, func):        
+        """
+            Aqui verifico se o parametro ainda é do tipo lista
+        """
+        if type(value) == list:
+            print("Teste executado com sucesso!\n"
+                  "Função %s OK\n" % func)
+            self.func_ok += 1
+            
+        else:
+            print("Erro na execução da função: %s\n"
+                  "Detalhes: Resultado diferente do esperado\n" % func)
+            self.func_erro += 1
+    
+    def unitTestbtnAlterarCategoria(self, value, func):        
+        """
+            Aqui verifico se o usuário selecionou uma categoria
+            Caso sim o tamanho da lista deve ser maior que zero
+        """
+        if len(value) > 0:
+            print("Teste executado com sucesso!\n"
+                  "Função %s OK\n" % func)
+            self.func_ok += 1
+            
+        else:
+            print("Erro na execução da função: %s\n"
+                  "Detalhes: Resultado diferente do esperado\n" % func)
+            self.func_erro += 1
+    
+    def unitTestbtnBuscarPergunta(self, value, func):        
+        """
+            Aqui verifico se o tipo de retorno é uma lista
+        """
+        if type(value) == list:
+            print("Teste executado com sucesso!\n"
+                  "Função %s OK\n" % func)
+            self.func_ok += 1
+            
+        else:
+            print("Erro na execução da função: %s\n"
+                  "Detalhes: Resultado diferente do esperado\n" % func)
+            self.func_erro += 1
+
+    def unitTestchecklog(self):
+        totalFunc = (self.func_ok + self.func_erro)
+        msg = (f"""
+|----------------------------------------------------------------------|
+|               Resultado de execução do programa                      |   
+|----------------------------------------------------------------------|
+Total de funções verificadas: {totalFunc}                             
+Testes OK: {self.func_ok}                                             
+Testes com Erro: {self.func_erro}                                     
+|----------------------------------------------------------------------|
+        """)
+        
+        print(msg)
